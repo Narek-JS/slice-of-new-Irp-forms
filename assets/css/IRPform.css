@@ -1,0 +1,389 @@
+.form-page {
+    max-width: 1340px;
+    min-height: 500px;
+    margin: 150px auto 20px;
+    padding: 30px;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+    color: var(--color-p);
+    border: 5px solid var(--color-s);
+}
+
+.form-page .page-main {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgba(245, 151, 32, 0.15);
+    border: 1px solid rgba(11, 71, 119, 0.15);
+}
+
+.form-page .page-header {
+    background-color: var(--color-p);
+}
+
+.form-page .page-body {
+    padding: 10px;
+}
+
+.form-section {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(11, 71, 119, 0.20);
+    background-color: #FDFDFF;
+}
+
+.form-page #signature {
+    height: 0 !important;
+    opacity: 0;
+}
+
+.form-page #usdot ~ .error, .form-page #business ~ .error {
+    bottom: -30px;
+}
+
+.bordered-container {
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--color-s);
+}
+
+.form-page .info-text {
+    padding: 10px;
+    background: #F4F7FB;
+    color: var(--color-p-60);
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+
+.irs-page .payment-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 10px;
+}
+
+.irs-page .payment-options > label {
+    width: 100%;
+    max-width: 655px;
+    display: flex;
+    align-items: stretch;
+    background-color: #fdfdff;
+    border: 1px solid #f59720;
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.irs-page .payment-options > label:hover {
+    box-shadow: 0 0 5px var(--color-s);
+}
+
+.irs-page .payment-options > label .switch-field {
+    width: 100px;
+    min-width: 100px;
+    background-color: #f4f7fb;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.irs-page .payment-options > label .info {
+    padding: 10px;
+    margin: auto 0
+}
+
+.irs-page .payment-options > label .info > h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #0b4777
+}
+
+.irs-page .payment-options > label .info > p {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(11, 71, 119, .8);
+    margin-top: 6px
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    min-width: 50px;
+    height: 24px
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 12, 51, .15);
+    transition: .2s
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: -2px;
+    bottom: -2px;
+    background-color: #fff;
+    border: 1px solid #0b4777;
+    transition: .2s
+}
+
+.switch input:checked + .slider, .switch input:checked + label + .slider {
+    background-color: #f59720
+}
+
+.switch input:focus + .slider, .switch input:focus + label + .slider {
+    box-shadow: 0 0 1px #2196f3
+}
+
+.switch input:checked + .slider:before, .switch input:checked + label + .slider:before {
+    transform: translateX(26px)
+}
+
+.switch .error {
+    position: absolute;
+    left: 12px;
+    bottom: -26px;
+    color: red;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+.switch .slider.round {
+    border-radius: 34px;
+    border: 1px solid #0b4777
+}
+
+.switch .slider.round:before {
+    border-radius: 50%
+}
+
+.note {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--color-p-60);
+    /*background-color: $blue-alice;*/
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.second-option, .third-option {
+    position: relative;
+}
+
+.second-option .desc {
+    margin-bottom: 20px;
+}
+
+.second-option p, .third-option p, .third-option p {
+    margin-bottom: 0;
+}
+
+.third-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.third-option .inline {
+    display: inline;
+}
+
+.third-option .tooltip-toggle {
+    display: inline-flex;
+}
+
+.third-option .tooltip-toggle:before {
+    left: unset;
+}
+
+.fourth-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fourth-option > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fourth-option > div:first-of-type > .desc:last-of-type {
+    color: var(--color-p);
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.desc {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 18px;
+    /*background-color: bl;*/
+    color: var(--color-p);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.desc.note-field {
+    background-color: rgba(255, 191, 0, 0.2);
+}
+
+.switch-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.switch-label .tooltip-toggle {
+    pointer-events: auto;
+}
+
+.switch-label .text {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 21px;
+    color: var(--color-p);
+    margin-bottom: 0;
+}
+
+.switch-label.disabled {
+    pointer-events: none;
+}
+
+.switch-label.disabled .text {
+    color: var(--color-p-60);
+}
+
+.switch-label.disabled .switch .slider {
+    border-color: var(--color-p-60);
+    background-color: rgba(0, 12, 51, 0.1);
+}
+
+.switch-label.disabled .switch .slider:before {
+    border-color: var(--color-p-60);
+}
+
+.switch-label .tooltip-toggle::before {
+    left: unset;
+    right: -50px;
+}
+
+@media screen and (max-width: 1401px) {
+    .switch-label .text {
+        font-size: 16px;
+    }
+}
+
+.vehicleDetails {
+    border: 1px solid var(--color-s);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+.vehicleDetails table tbody {
+    min-height: 34px;
+}
+
+.vehicleDetails table thead {
+    background: rgba(11, 71, 119, 0.60);
+}
+
+.vehicleDetails table thead th {
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.vehicleDetails table tbody td {
+    padding: 10px;
+    color: var(--color-p-80);
+}
+
+
+.vin-checker .vin-number {
+    border: 1px solid #0b4777;
+    border-right: none;
+    border-left: none;
+    padding: 15px 0;
+    letter-spacing: 1rem;
+    color: var(--color-p);
+    margin-top: 5px;
+    gap: 20px
+}
+
+.vin-checker .vin-number > .icon > span {
+    font-size: 32px !important
+}
+
+.vin-checker .vin-number > .icon > span:before {
+    color: #008040
+}
+
+.vin-checker .vin-number > .icon > span.failed {
+    color: #f86565
+}
+
+.vin-checker .sub-title, .confirm-block .vin-checker p {
+    color: rgba(11, 71, 119, .8);
+}
+
+.vin-checker .details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px
+}
+
+.vin-checker .details > div {
+    width: 50%
+}
+
+.vin-checker .details > div > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(11, 71, 119, .6);
+    padding: 10px
+}
+
+.form-page .amountArea {
+    background: #F4F7FB;
+}
+
+.form-page .billedToCardArea {
+    background: rgba(245, 151, 32, 0.20);
+}
+
+
+
+
+
+
+
+

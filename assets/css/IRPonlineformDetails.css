@@ -1,0 +1,512 @@
+.details-content{
+    width: auto;
+    height: auto;
+    border: 2px solid #F59720;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--blue-alice);
+}
+
+
+.closeBtnDetails {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: var(--color-s);
+    border-radius: 50%;
+    border: none;
+}
+
+
+
+.nth-box {
+    display: flex;
+    flex-direction: column;
+}
+.nth-box .box-head {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--color-p);
+}
+.nth-box .box-head > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nth-box .box-head .title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin: 0;
+}
+.see-more-part {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.see-more-part > .text {
+    color: var(--color-s);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+.nth-box .box-content {
+    border: 1px solid var(--color-s);
+    border-radius: 0px 0px 5px 5px;
+    background-color: #FFFFFF;
+    height: 100%;
+}
+.nth-box .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+}
+.nth-box .details > div {
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--blue-alice);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.nth-box .box-content > .details:nth-of-type(2) > div {
+    border-radius: 5px 0px 0px 5px;
+}
+.nth-box .details.long-text h4 {
+    width: 60%;
+}
+.nth-box .details .highlighted {
+    background-color: var(--color-s-20);
+    font-weight: 700;
+}
+.nth-box .details .highlighted p {
+    color: var(--color-p);
+}
+.nth-box .details > div h4, .irs-exp > h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-p);
+    width: 47%;
+    margin: 0;
+}
+.nth-box .details > div h5 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+.nth-box .details > div h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+}
+.nth-box .details > div p, .irs-exp > p {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-p-80);
+    width: 47%;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.irs-exp {
+    background-color: var(--blue-alice);
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+.irs-exp h4 {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.irs-exp p {
+    width: 100%;
+}
+
+
+.column-gap {
+    margin-left: 20px;
+}
+
+.actions-part {
+    border: 1px solid var(--color-p-20);
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions-part .buttons-section {
+    gap: 20px;
+    padding-right: 10px;
+}
+
+.actions-part button {
+    width: 135px;
+    height: 38px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    color: #FFFFFF;
+}
+
+.notesBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #1266F1;
+    width: 80px !important;
+    height: 32px !important;
+}
+.hasNote {
+    background-color: var(--color-s);
+}
+.notesBtn i {
+    font-size: 20px;
+}
+
+
+.actions-part > div:first-of-type > div {
+    padding: 22px 20px 22px 10px;
+    border-right: 1px solid var(--color-p-20);
+    min-width: 320px;
+
+}
+
+.actions-part .details {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-p-80);
+}
+.actions-part .details > div, #orderNotesDetails .details > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.actions-part .details *, #orderNotesDetails .details *  {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+}
+.actions-part .details .key, #orderNotesDetails .details .key {
+    font-weight: 700;
+    color: var(--color-p);
+}
+
+#orderNotesDetails .modal-content {
+    border: 5px solid var(--color-s);
+}
+
+#orderNotesDetails .closeBtnDetails, #removePostModal .closeBtnDetails {
+    width: 32px;
+    height: 32px;
+}
+#orderNotesDetails .top-part {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--color-s);
+}
+
+#orderNotesDetails .adding-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px dashed var(--color-s);
+}
+
+#orderNotesDetails textarea {
+    min-height: 100px;
+    border-color: var(--color-s);
+    margin-top: 10px;
+}
+
+#orderNotesDetails .notesBtn {
+    width: 340px !important;
+}
+
+#noteModal  .modal-content, #notePermitModal .modal-content {
+    width: 800px;
+    border: 5px solid var(--color-s);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#noteModal #content, #notePermitModal #content {
+    min-height: 400px;
+}
+#businessModal >div {
+    height: fit-content;
+}
+#businessModal #content {
+    min-height: 670px;
+}
+#permitActionModal .customDetailsTable {
+    border: none;
+}
+#permitActionModal #content, .formErrorListModal #content {
+    min-height: 200px !important;
+}
+
+#businessModal .customDetailsTable {
+    border-width: 1px;
+    border-collapse: collapse;
+
+}
+#businessModal .table-container > table tbody td {
+    vertical-align: baseline;
+}
+#businessModal .table-container td, #businessModal .table-container th {
+    padding: 10px;
+    border: 1px solid;
+}
+
+.notes-part {
+    margin-top: 20px;
+}
+
+.notes-count {
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-alice);
+    border: 1px solid var(--color-s);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+}
+#noteCount {
+    margin-left: 10px;
+}
+
+.nth-note {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+.nth-note > svg {
+    min-width: 32px;
+}
+#notesList {
+    max-height: 350px;
+    overflow-y: auto;
+}
+#notesList::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+#notesList::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: var(--color-p);
+    transition: 0.3s;
+}
+#notesList::-webkit-scrollbar-thumb {
+    background: var(--color-s);
+    border-radius: 10px;
+}
+#notesList > div:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-s);
+    margin-bottom: 20px;
+}
+#notesList > div:last-of-type {
+    border-bottom: 1px dashed var(--color-s);
+}
+
+.nth-note h4 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 !important;
+}
+.nth-note p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 5px 0 0;
+    overflow-wrap: anywhere;
+}
+
+
+.nth-box .details .signature-part {
+    background-color: unset;
+    padding: unset;
+    align-items: stretch;
+}
+
+.signature-part  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.signature-part  > div > div {
+    background-color: var(--blue-alice);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px 0px 0px 5px;
+}
+.img-container {
+    max-width: 250px;
+}
+#signature, .empty-img-container {
+    width: 250px;
+    max-width: 250px;
+    height: 100px;
+    background-color: var(--white);
+    border: 1px solid var(--color-s);
+    border-radius: 5px;
+}
+.prev-modal {
+    display: flex !important;
+    z-index: -1 !important;
+}
+
+
+/*8822*/
+#pdf8822Modal .modal-dialog  {
+        width: 940px;
+        max-width: unset;
+}
+
+.download-pdf svg {
+    width: 32px
+}
+.download-pdf  path {
+    fill: var(--white);
+}
+.download-pdf .title, .send-invoice .send-title {
+    border-bottom: 1px solid;
+}
+.send-invoice svg {
+    height: 40px;
+    width: 40px;
+}
+.send-invoice .send-title {
+    color: var(--color-p);
+}
+
+#invoiceDate {
+    margin: 0 0 0 10px;
+    color: var(--color-p-80);
+}
+
+    /*Post */
+.postStatusActive input[type=radio] {
+    border-color: #00B74A;
+}
+
+.postStatusActive input[type=radio]::after {
+    color: #00B74A;
+}
+
+.postStatusInactive input[type=radio] {
+    border-color: #F93154;
+}
+
+.postStatusInactive input[type=radio]::after {
+    color: #F93154;
+}
+
+.postType {
+    max-width: 174px;
+}
+
+/*.postContent + .cke {*/
+/*    width: 75%;*/
+/*}*/
+
+#uploadedPostImage {
+    transition: .2s;
+    max-height: 200px;
+}
+
+#uploadedPostImage:hover {
+    filter: brightness(0.8);
+}
+#postDescription {
+    background-color: var(--blue-alice);
+    border: 1px solid var(--color-p-20);
+    border-radius: 5px;
+}
+#postDescription table img {
+    width: 60px;
+}
+
+#postDescription table td {
+    padding: 5px;
+}
+
+#postDescription > div {
+    border: 1px solid #044C8633;
+    padding: 7px;
+    background-color: #F4F7FB;
+}
+
+#postCommentsRoot .postCommentsTitle {
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #044C8633;
+    background-color: #F4F7FB;
+}
+
+#postCommentsRoot {
+    max-height: 750px;
+    overflow-y: auto;
+}
+
+#postCommentsRoot .postCommentItem {
+    background-color: #FDFDFE;
+}
+
+#postCommentsRoot .postCommentItem .commentDate, #postCommentsRoot .postCommentItem .commentBody {
+    font-size: 14px;
+    color: #0B477799;
+}
+#postModal .details-content {
+    min-height: 700px;
+}
+#postModal .note-block {
+    max-width: 65%;
+}
+.post-content {
+    background-color: #F9F9F9;
+    border: 1px solid var(--color-p-20);
+    border-radius: 5px;
+    padding: 10px;
+}
+.post-details {
+    background-color: #F9F9F9;
+    border: 1px solid var(--color-p-20);
+    border-radius: 5px;
+    padding: 10px;
+}
+.post-details .box-head {
+    padding: 9px 20px;
+    background-color: var(--blue-alice);
+    border-bottom: 1px solid var(--color-p-20);
+}
+.post-details .content-block {
+    border: 1px solid var(--color-p-20);
+    border-radius: 5px;
+}

@@ -1,0 +1,103 @@
+#lottie-track-animation {
+    width: 100%;
+    height: 390px;
+}
+
+#lottie-track-animation svg > g > g:first-child > g:nth-child(2) > path {
+    fill: transparent;
+}
+#lottie-track-animation svg > g > g:first-child > g:nth-child(2) > path {
+    fill: transparent;
+}
+
+section {
+    padding: 0 30px;
+}
+
+.welcomeBanner {
+    width: 100%;
+    max-width: 1340px;
+    margin: 170px auto 0;
+    padding: 40px;
+    border-radius: 10px;
+    background: #F4F7FB;
+    box-shadow: 4px 4px 10px 0 rgba(0, 29, 74, 0.30), -4px -2px 10px 0px rgba(0, 29, 74, 0.30);
+}
+
+.welcomeBanner .container {
+    border-radius: 10px;
+    border: 1px solid #3A9EFE;
+    opacity: 0.9;
+    background: #FFF;
+    display: flex;
+    align-content: center;
+    column-gap: 40px;
+    padding: 25px 0;
+}
+
+.welcomeBanner .container > div {
+    width: 50%;
+    max-width: 600px;
+}
+.welcomeBanner .container .asideRight{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: center;
+}
+
+.welcomeBanner h2 {
+    color: #3A9EFE;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+}
+.welcomeBanner h2 span{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.welcomeBanner h2 .authName{
+    text-transform: capitalize;
+    font-weight: inherit;
+}
+.welcomeBanner p {
+    color: rgba(0, 29, 74, 0.80);
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.welcomeBanner .txtsContent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.welcomeBanner .btnsContent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.welcomeBanner a {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    background: #3A9EFE;
+    padding: 7px 0;
+    text-transform: uppercase;
+    color: #FDFDFF;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+.welcomeBanner .darkBtn {
+    background-color: #001D4A;
+}

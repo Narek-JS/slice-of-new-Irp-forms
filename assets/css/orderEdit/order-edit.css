@@ -1,0 +1,630 @@
+/* ------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL FOR EDIT POPUP */
+
+.editPermitPopupContainer {
+    overflow-y: hidden;
+}
+
+.informationBlockContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.informationBlockContainer h3 {
+    width: 100%;
+    height: 40px;
+    background: var(--order-edit-darkBlue) !important;
+    border-radius: 5px 5px 0px 0px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.informationBlockContainer .formBlock {
+    padding: 10px 20px 20px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 29, 74, 0.20);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 10px;
+}
+
+.editPermitPopup-inputGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    max-width: 376px;
+}
+
+.editPermitPopup-inputGroup label {
+    font-weight: 700;
+    color: var(--order-edit-darkBlue) !important;
+    letter-spacing: .6px;
+}
+
+.editPermitPopup-inputGroup label span {
+    color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+.editPermitPopup-inputGroup select,
+.editPermitPopup-inputGroup input {
+    width: 100%;
+    border: 1px solid rgba(0, 29, 74, 0.20) !important;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    height: 38px;
+    color: var(--order-edit-darkBlue) !important;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.editPermitPopup-inputGroup .labelWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.editPermitPopup-inputGroup .ssn_ein {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.editPermitPopup-inputGroup .ssn_ein .ssnCheckbox,
+.editPermitPopup-inputGroup .ssn_ein .einCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.editPermitPopup-inputGroup .ssn_ein input {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    padding: 0;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.editPermitPopup-inputGroup .ssn_ein label {
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.editPermitPopup-inputGroup select {
+    cursor: pointer;
+    padding: 9.3px 10px;
+    height: initial;
+    color: rgba(0, 29, 74, 0.40) !important;
+    font-size: 15px;
+    max-width: 100%;
+}
+
+.editPermitPopup-inputGroup input::placeholder {
+    color: rgba(0, 29, 74, 0.40) !important;
+    font-size: 15px !important;
+}
+
+.editPermitPopup-inputGroup select:focus,
+.editPermitPopup-inputGroup input:focus {
+    outline: none;
+}
+
+.editPermitPopup-inputGroup input::-moz-focus-inner {
+    border: 1px solid rgba(0, 29, 74, 0.20);
+}
+
+.editPermitPopup-inputGroup label.error {
+    position: absolute;
+    bottom: -20px;
+    left: 3px;
+    color: #F93154 !important;
+    font-weight: normal !important;
+    font-size: 12px;
+}
+
+/* Style for customize File input */
+.editPermitPopup-inputGroup input[type="file"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.editPermitPopup-inputGroup .forFile {
+    border: 1px solid rgba(0, 29, 74, 0.20) !important;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    height: 40px;
+    color: rgba(0, 29, 74, 0.40) !important;
+    font-size: 15px !important;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    background: rgba(7,39,101,.05);
+}
+
+.editPermitPopup-inputGroup .forFile.success {
+    background: rgba(0, 183, 73, 0.281);
+}
+
+.editPermitPopup-inputGroup .forFile input {
+    opacity: 0;
+    height: 0;
+}
+
+.editPermitPopup-inputGroup .forFile .uploadedFileName,
+.editPermitPopup-inputGroup .forFile .placeholder {
+    position: absolute;
+    left: 10px;
+    font-size: 13px;
+    transform: translateY(0);
+    color: rgba(0, 29, 74, 0.40) !important;
+    max-width: 130px;
+    line-height: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    background-color: transparent !important;
+}
+
+.editPermitPopup-inputGroup.none,
+.editPermitPopup-inputGroup .forFile .uploadedFileName {
+    display: none;   
+}
+
+.editPermitPopup-inputGroup .forFile svg {
+    position: absolute;
+    max-width: 45px !important;
+    max-height: 45px !important;
+}
+
+/* Style for the custom select */
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select.disabled .select-trigger,
+.custom-select.disabled {
+    background: rgba(0, 29, 74, 0.10) !important;
+    pointer-events: none;
+}
+
+/* Style for the visible part of the select */
+.select-trigger {
+    padding-left: 10px;
+    border: 1px solid rgba(0, 29, 74, 0.20);
+    cursor: pointer;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 16px;
+    color: var(--order-edit-darkBlue) !important;
+    background-color: #FDFDFF;
+}
+
+.select-trigger li {
+    display: none;
+}
+
+.select-trigger:has(li) {
+    color: rgba(0, 29, 74, 0.40) !important;
+    font-size: 15px !important;
+}
+
+.select-trigger i {
+    width: 60px;
+    height: 38px;
+    background-color: #F4F7FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.custom-select.active .select-trigger i {
+    border-radius: 0 5px 0 0px;
+}
+
+.custom-select .select-trigger i svg {
+    transition: all .2s;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 0 auto;
+    transform: rotate(0deg);
+}
+
+.custom-select.active .select-trigger i svg {
+    transform: rotate(180deg);
+}
+
+.custom-select.active .select-trigger {
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+
+/* Style for the dropdown content */
+.select-options {
+    transition: all .2s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-height: 275px;
+    overflow-y: auto;
+}
+
+.select-options::-webkit-scrollbar {
+    width: 8px;
+}
+  
+.select-options::-webkit-scrollbar-track {
+    background-color: #F4F7FB;
+}
+
+.select-options::-webkit-scrollbar-thumb {
+    background-color: #0B4777;
+}
+
+.select-option:hover {
+    background-color: rgba(0, 30, 74, 0.082);
+}
+
+/* Style for each option in the dropdown */
+.select-option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Show the dropdown when the select is clicked */
+.custom-select.active .select-options {
+    display: block;
+}
+
+/* EDIT PERMIT POPUP */
+.editPermitPopup * {
+    font-family: Arial;
+}
+
+.editPermitPopup {
+    max-width: 1260px;
+    width: 100%;
+    border: 5px solid var(--order-edit-mainBlue) !important;
+    border-radius: 5px;
+    background: #F4F7FB;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+/*  FORMS BY STEPS  */
+  /* EDIT STEP FOMRS */
+.editPermitPopup__edit {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    /* CONTACT INFORMATION FORM */
+.editPermitPopup__edit-contactForm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+    /* CARRIER INFORMATION FORM */
+.editPermitPopup__edit-carrierForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editPermitPopup__edit-carrierForm-groupNode {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.editPermitPopup__edit-carrierForm-groupNode:has(.operateUsdot) {
+    flex-wrap: nowrap;
+}
+
+.operateUsdot {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.editPermitPopup__edit-carrierForm-groupNode .editPermitPopup-inputGroup {
+    max-width: 376px;
+} 
+
+.editPermitPopup__usdot {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 376px;
+    height: 38px;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    background: transparent;
+    white-space: nowrap;
+    border: 2px solid var(--order-edit-mainBlue) !important;
+    color: var(--order-edit-mainBlue) !important; 
+}
+
+.editPermitPopup__usdot.active {
+    background: var(--order-edit-mainBlue) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+}
+
+.editPermitPopup__updateButton-vehicle,
+.editPermitPopup__updateButton-member,
+.editPermitPopup__updateButton-carrierInfo {
+    background: var(--order-edit-mainBlue) !important;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px auto 0 auto;
+    max-width: 600px;
+    height: 38px;
+    padding: 7px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+/* CARRIER OPERATION DETAILS */
+.editPermitPopup__edit-Operation {
+    width: 100%;
+}
+
+.editPermitPopup__edit-Operation .memberFields {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.editPermitPopup__updateButton-vehicle,
+.editPermitPopup__updateButton-member {
+    margin-top: 20px;
+} 
+
+/* MEMBER DETAILS */
+.editPermitPopup__edit-member {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.editPermitPopup__edit-member.active {
+    display: flex;
+}
+
+  /* MEMBER TABLE */
+.editPermitPopup__edit-member table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-color: rgba(7,39,101,.4);
+}
+
+    /* MEMBER TABLE HEADER */
+.editPermitPopup__edit-member thead {
+    background-color: var(--order-edit-darkBlue) !important;
+    color: #fdfdff;
+}
+
+.editPermitPopup__edit-member thead tr td {
+    padding: 10px;
+    border-right: 1px solid #FFFFFF;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .8px;
+}
+
+.editPermitPopup__edit-member thead tr td:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.editPermitPopup__edit-member thead tr td:last-child {
+    border-radius: 0px 5px 0 0;
+    border: none;
+}
+
+    /* MEMBER TABLE BODY */
+.editPermitPopup__edit-member tbody {
+
+}
+
+.editPermitPopup__edit-member tbody tr td {
+    padding: 10px;
+    outline: 1px solid rgba(0, 29, 74, 0.20);
+    text-align: center;
+    font-weight: 400;
+    color: rgba(0, 29, 74, 0.70);
+}
+
+.editPermitPopup__edit-member tbody tr td:first-child {
+    font-weight: 900;
+    color: var(--order-edit-darkBlue) !important;
+}
+
+.editPermitPopup__edit-member tbody tr button {
+    margin: 0 auto;
+    width: auto;
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    color: #FFFFFF;
+    padding: 3px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.editPermitPopup__edit-member-edit {
+    background: #FFA900;
+}
+
+.editPermitPopup__edit-member-delete {
+    background: #F93154;
+}
+
+
+
+/* VEHICLE DETAILS */
+.editPermitPopup__edit-vehicles-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+  /* VEHICLE TABLE */
+.editPermitPopup__edit-vehicles-table table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-color: rgba(7,39,101,.4);
+}
+
+    /* VEHICLE TABLE HEADER */
+.editPermitPopup__edit-vehicles-table thead {
+    background-color: var(--order-edit-darkBlue) !important;
+    color: #fdfdff;
+}
+
+.editPermitPopup__edit-vehicles-table thead tr td {
+    padding: 10px;
+    border-right: 1px solid #FFFFFF;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .8px;
+}
+
+.editPermitPopup__edit-vehicles-table thead tr td:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.editPermitPopup__edit-vehicles-table thead tr td:last-child {
+    border-radius: 0px 5px 0 0;
+    border: none;
+}
+
+    /* VEHICLE TABLE BODY */
+.editPermitPopup__edit-vehicles-table tbody {
+
+}
+
+.editPermitPopup__edit-vehicles-table tbody tr td {
+    padding: 10px;
+    outline: 1px solid rgba(0, 29, 74, 0.20);
+    text-align: center;
+    font-weight: 400;
+    color: rgba(0, 29, 74, 0.70);
+}
+
+.editPermitPopup__edit-vehicles-table tbody tr td:first-child {
+    font-weight: 900;
+    color: var(--order-edit-darkBlue) !important;
+}
+
+.editPermitPopup__edit-vehicles-table tbody tr button {
+    margin: 0 auto;
+    width: auto;
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    color: #FFFFFF;
+    padding: 3px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.editPermitPopup__edit-vehicles-edit {
+    background: #FFA900;
+}
+
+.editPermitPopup__edit-vehicles-delete {
+    background: #F93154;
+}
+
+.editPermitPopup__edit-vehicles-form {
+    width: 100%;
+}
+
+.editPermitPopup__edit-vehicles-form .vehicleFields {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

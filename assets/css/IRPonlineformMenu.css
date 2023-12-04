@@ -1,0 +1,17 @@
+.menuitem a {
+    font-weight: 500;
+    padding: 0.25rem 1.5rem;
+}
+
+.menuitem.active a {
+    color: #1266f1;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-item .menuitem.active{
+    color: #F59720 !important;
+}
+
+.navbar-nav .nav-item .menuitem.active svg path{
+    fill: #F59720 !important;
+}

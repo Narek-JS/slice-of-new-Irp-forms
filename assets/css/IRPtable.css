@@ -1,0 +1,276 @@
+
+.table-container {
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 13px;
+}
+
+.table-container > table {
+    border: 1px solid var(--color-p-20);
+    border-width: 1px 1px 0px 1px;
+    border-radius: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table thead th {
+    font-weight: 700;
+    font-size: 18px;
+    white-space: nowrap;
+    color: var(--color-p);
+    cursor: pointer;
+}
+
+table tfoot {
+    background-color: var(--color-s-20);
+}
+table tfoot th {
+    font-size: 20px;
+    font-weight: 700 !important;
+    color: var(--color-p);
+}
+
+
+.table-container > table tbody th, .table-container > table tbody td {
+    font-size: 14px;
+    color: var(--color-p) !important;
+    max-width: 350px;
+    overflow-y: auto;
+}
+
+.table>:not(caption)>*>* {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.table-container > table tbody > tr > td:first-child {
+    font-size: 18px;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: unset;
+}
+.table-container .customDetailsTable {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --mdb-table-accent-bg: var(--blue-alice);
+}
+.sortAscDescButton i {
+    color: var(--color-p-20);
+    position: relative;
+}
+.sortAscDescButton.active i {
+    color: var(--color-p);
+}
+
+.sortAscDescButton.active i::after {
+    content: "";
+    position: absolute;
+    top: -0.4em;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--color-p-20);
+    margin-top: 3px;
+}
+
+.sortAscDescButton.active i::before {
+    content: "";
+    position: absolute;
+    top: -0.8em;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid var(--color-p);
+}
+
+.sortAscDescButton.active-asc i::after {
+    border-top: 8px solid var(--color-p);
+}
+.sortAscDescButton.active-asc i::before {
+    border-bottom: 8px solid var(--color-p-20);
+}
+
+#clientsTable tbody tr {
+    height: 94px;
+}
+
+#clientsTable td, #businessesTable  td, #servicesTable td {
+    vertical-align: middle;
+}
+#clientsTable button, #businessesTable button {
+    width: 160px !important;
+}
+
+#businessesTable tbody tr {
+    height: 54px;
+}
+
+#servicesTable .service-img, #newFormTable .service-img {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-size: cover;
+}
+
+#newForm .modal-dialog{
+    position: relative;
+    max-width: 1260px;
+    min-height: 500px;
+}
+
+#newForm .note-block{
+    margin-right: 60px;
+}
+
+#newForm .modal-content{
+
+    padding: 10px;
+    border: 5px solid var(--color-s);
+}
+s
+#newFormTable thead th {
+    font-weight: bold;
+}
+
+#newFormTable tbody td {
+    vertical-align: middle;
+    padding: 5px;
+}
+
+#newFormTable tbody td:first-of-type{
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#servicesTable .service-backdrop, #newFormTable .service-backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(11,71,119,.6);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#servicesTable .details-tr td {
+    height: 320px
+}
+#servicesTable>:not(caption)>*>* {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.nth-service {
+    min-width: 355px;
+    padding: 15px 19px 13px;
+    border-radius: 10px;
+    background-color: var(--blue-alice);
+    filter: drop-shadow(5px 5px 5px rgba(0, 12, 51, 0.15));
+}
+
+.nth-service .cost {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    color: var(--white);
+    z-index: 9;
+}
+.nth-service .service-icon {
+    position: absolute;
+    top: 45px;
+    left: -60px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 12, 51, 0.15));
+    transition: 0.3s;
+    pointer-events: none;
+}
+.nth-service .service-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-p);
+    margin: 12px 0 20px;
+}
+.nth-service .read-more {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nth-service .read-more >span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--color-p-60);
+    transition: 0.3s ease-out;
+}
+
+    /*Table for Order Details*/
+
+
+.details-table table {
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    background-color: var(--white);
+    border: 1px solid var(--color-s);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.details-table th {
+    color: #FFFFFF;
+}
+
+.details-table tr {
+    height: 35px;
+}
+
+.details-table thead {
+    background-color: var(--color-p-60) !important;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.details-table tbody {
+    color: var(--color-p-80);
+}
+.details-table tbody tr {
+    background-color: var(--blue-alice);
+}
+
+.details-table th, .details-table td {
+    padding-left: 10px;
+    max-width: 400px;
+    overflow-wrap: anywhere;
+}
+
+.td-content {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+
+.active-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    background-color: #00B74A;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.edit-btn {
+    background-color: var(--color-s);
+}
